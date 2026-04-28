@@ -24,9 +24,17 @@
 # cria_usuario("Dan", 25, admin=True)
 
 def criar_perfil(nome, idade, cidade):
-    print(f'{nome}, {idade} anos ,{cidade}')
+    print(f"{nome}, {idade} anos, {cidade}")
 
-criar_perfil(cidade="Curitiba", nome="Chupson", nome="40")
-#Chupson, 40 anos, Curitiba - funciona independente da ordem!
+# Chamadas com argumentos nomeados (ordem não importa)
+criar_perfil(cidade="Curitiba", nome="Chupson", idade=40)
+criar_perfil(nome="Ana", idade=25, cidade="São Paulo")
 
+# Função com quantidade variável de argumentos
+def somar_tudo(*numeros):
+    return sum(numeros)
 
+# Exibindo os resultados
+print(somar_tudo(1, 2))
+print(somar_tudo(1, 2, 3, 4))
+print(somar_tudo(20, 30))
